@@ -21,3 +21,5 @@
 
  /*** load the controller ***/
  $registry->router->loader();
+ 
+ 

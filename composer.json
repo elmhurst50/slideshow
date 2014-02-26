@@ -7,11 +7,16 @@
         {
             "url": "https://github.com/samjoyce777/simpleimage",
             "type": "vcs"
+        },
+         {
+            "url": "https://github.com/samjoyce777/montageplayer",
+            "type": "vcs"
         }
     
     ],
     "require": {
         "samjoyce777/location": "dev-master",
-        "samjoyce777/simpleimage": "dev-master"
+        "samjoyce777/simpleimage": "dev-master",
+        "samjoyce777/montageplayer" : "dev-master"
     }
 }

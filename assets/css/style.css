@@ -1,0 +1,230 @@
+/*-------------------------
+    Simple reset
+--------------------------*/
+
+
+*{-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+
+/*-------------------------
+    General Styles
+--------------------------*/
+
+
+html{
+    background-color:#fff;
+}
+
+body{
+    font:15px/1.3 Arial, sans-serif;
+    color: #4f4f4f;    
+}
+
+body.playerScreen{
+    /* overflow:hidden; */
+}
+
+a, a:visited {
+    outline:none;
+    /* color:#389dc1; */
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+section, footer, header, aside{
+    display: block;
+}
+
+
+/*----------------------------
+    The file upload form
+-----------------------------*/
+
+
+#upload{
+    font-family:'PT Sans Narrow', sans-serif;
+    background-color:#373a3d;
+
+    background-image:-webkit-linear-gradient(top, #373a3d, #313437);
+    background-image:-moz-linear-gradient(top, #373a3d, #313437);
+    background-image:linear-gradient(top, #373a3d, #313437);
+
+    width:250px;
+    padding:30px;
+    border-radius:3px;
+
+    margin:20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#drop{
+    background-color: #2E3134;
+    padding: 40px 50px;
+    margin-bottom: 30px;
+    border: 20px solid rgba(0, 0, 0, 0);
+    border-radius: 3px;
+    border-image: url('../img/border-image.png') 25 repeat;
+    text-align: center;
+    text-transform: uppercase;
+
+    font-size:16px;
+    font-weight:bold;
+    color:#7f858a;
+}
+
+#drop a{
+    background-color:#007a96;
+    padding:12px 26px;
+    color:#fff;
+    font-size:14px;
+    border-radius:2px;
+    cursor:pointer;
+    display:block;
+    margin-top:12px;
+    line-height:1;
+    float:left;
+    margin-left: -30px;
+}
+
+#drop a:hover{
+    background-color:#0986a3;
+}
+
+#drop input{
+    display:none;
+}
+
+#upload ul{
+    list-style:none;
+    margin:0 -30px;
+    border-top:1px solid #2b2e31;
+    border-bottom:1px solid #3d4043;
+}
+
+#upload ul li{
+
+    background-color:#333639;
+
+    background-image:-webkit-linear-gradient(top, #333639, #303335);
+    background-image:-moz-linear-gradient(top, #333639, #303335);
+    background-image:linear-gradient(top, #333639, #303335);
+
+    border-top:1px solid #3d4043;
+    border-bottom:1px solid #2b2e31;
+    padding:15px;
+    height: 52px;
+
+    position: relative;
+}
+
+#upload ul li input{
+    display: none;
+}
+
+#upload ul li p{
+    width: 144px;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #EEE;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 100px;
+}
+
+#upload ul li i{
+    font-weight: normal;
+    font-style:normal;
+    color:#7f7f7f;
+    display:block;
+}
+
+#upload ul li canvas{
+    top: 15px;
+    left: 32px;
+    position: absolute;
+}
+
+#upload ul li span{
+    width: 15px;
+    height: 12px;
+    background: url('../img/icons.png') no-repeat;
+    position: absolute;
+    top: 34px;
+    right: 33px;
+    cursor:pointer;
+}
+
+#upload ul li.working span{
+    height: 16px;
+    background-position: 0 -12px;
+}
+
+#upload ul li.error p{
+    color:red;
+}
+
+@keyframes zoom
+{
+    from {width:100%; top:0; left: 0; height: auto;}
+    to {width: calc(100% + 200px); top:-100px; left:-100px; }
+}
+@keyframes scrollUp 
+{
+    from {top:0; left: 0; height: auto;}
+    to {top:-200px;}
+}
+
+@-webkit-keyframes zoom /* Safari and Chrome */
+{
+    from {width:100%; top:0; left: 0; height: auto;}
+    to {width: calc(100% + 25%); height: auto; top:-10%; left:-10%; }
+}
+
+@-webkit-keyframes scrollUp /* Safari and Chrome */
+{
+    from {top:0; left: 0; height: auto;}
+    to {top:-200px;}
+}
+
+
+.slideshow{width:100%; height:100%; min-height: 100%; border:solid black 1px; overflow: hidden; position: relative;}
+.slide{width:100%; height: auto; min-height: 100%;position: absolute; top:0; left:0; color:#000; z-index: 1000;}
+.slide-panel{text-align: right; color: #eee; padding: 0.5em; top: 10px; right:10px; width: 300px; border: solid black 1px; z-index: 1100; position: absolute;  background: rgba(0,0,0,0.5); }
+
+
+.zoom img{width:100%; height: auto; min-height: 100%;position: absolute; top:0; left:0; color:#000; z-index: 1000;}
+.zoom img
+{
+    animation: zoom 8s;
+    -webkit-animation: zoom 8s; /* Safari and Chrome */
+} 
+.scrollUp img
+{
+    animation: scrollUp 8s;
+    -webkit-animation: scrollUp 8s; /* Safari and Chrome */
+} 
+.red{border: red solid 3px;}
+.green{border: green solid 3px;}
+
+#player-menu{z-index:9200; height: 10%; width: 100%; padding: 1em; background: rgba(0,0,0,0.8);}
+
+.list-item{ padding: 0.5em; float:left; margin-bottom: 1em; background: #ddd;}
+.list-item:nth-child(odd){background: #eee;}
+.list-item a.btn{margin-bottom:0.5em;}
+
+
+.btn-primary a:visited{color:#fff;}
+
+
+#player-menu a{text-align: center; float:left; margin: 0 1em; width:  10%;}
+
+
+.slideEditor:first-of-type .upButton{display:none;}
+.slideEditor:last-of-type .downButton{display: none;}

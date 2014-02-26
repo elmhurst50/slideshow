@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "3844fbc34b5821a8be291ae6132f2ba3",
+    "hash": "a6df860506d49e9e96da676c4aaa0223",
     "packages": [
         {
             "name": "samjoyce777/location",
@@ -48,6 +48,50 @@
                 "issues": "https://github.com/samjoyce777/location/issues"
             },
             "time": "2014-02-25 11:32:14"
+        },
+        {
+            "name": "samjoyce777/montageplayer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/samjoyce777/montageplayer.git",
+                "reference": "6df7d3c0541c7e5294c97c9af91a02f6f5ada93d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/samjoyce777/montageplayer/zipball/6df7d3c0541c7e5294c97c9af91a02f6f5ada93d",
+                "reference": "6df7d3c0541c7e5294c97c9af91a02f6f5ada93d",
+                "shasum": ""
+            },
+            "type": "git",
+            "autoload": {
+                "psr-0": {
+                    "samjoyce\\montageplayer": "src",
+                    "samjoyce\\montageinterface": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sam Joyce",
+                    "email": "samjoyce777@gmail.com",
+                    "homepage": "http://www.samjoyce.co.uk",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Plays a montage based on imported images from source",
+            "homepage": "http://samjoyce.co.uk",
+            "keywords": [
+                "image",
+                "montage"
+            ],
+            "support": {
+                "source": "https://github.com/samjoyce777/montageplayer/tree/master",
+                "issues": "https://github.com/samjoyce777/montageplayer/issues"
+            },
+            "time": "2014-02-26 13:43:37"
         },
         {
             "name": "samjoyce777/simpleimage",
@@ -103,7 +147,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "samjoyce777/location": 20,
-        "samjoyce777/simpleimage": 20
+        "samjoyce777/simpleimage": 20,
+        "samjoyce777/montageplayer": 20
     },
     "platform": [
 
