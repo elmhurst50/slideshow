@@ -1,0 +1,1 @@
+This is the best skeleton mvc setup I seen to learn project stucture.

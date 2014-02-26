@@ -1,0 +1,13 @@
+# Apache configuration file (see httpd.apache.org/docs/2.2/mod/quickreference.html)
+
+RewriteEngine on
+
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+
+RewriteRule ^(.*)$ index.php?rt=$1 [L,QSA]
