@@ -1,0 +1,17 @@
+{
+    "repositories": [
+        {
+            "url": "https://github.com/samjoyce777/location",
+            "type": "vcs"
+        },
+        {
+            "url": "https://github.com/samjoyce777/simpleimage",
+            "type": "vcs"
+        }
+    
+    ],
+    "require": {
+        "samjoyce777/location": "dev-master",
+        "samjoyce777/simpleimage": "dev-master"
+    }
+}

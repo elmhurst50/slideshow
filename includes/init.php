@@ -24,6 +24,12 @@
   include ($file);
 }
 
+/*
+ * Load classes on request from vendor/composer folder
+ */
+require_once __SITE_PATH.'/vendor/autoload.php';
+
+
  /*** a new registry object ***/
  $registry = new registry;
 
