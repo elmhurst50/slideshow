@@ -13,8 +13,8 @@
  include __SITE_PATH . '/application/' . 'template.class.php';
 
  /*** auto load model classes ***/
-    function __autoload($class_name) {
-    $filename = strtolower($class_name) . '.class.php';
+    function autoload_model($class_name) {
+    $filename = strtolower($class_name) . '.php';
     $file = __SITE_PATH . '/model/' . $filename;
 
     if (file_exists($file) == false)
@@ -23,6 +23,12 @@
     }
   include ($file);
 }
+
+/*
+ * auto load from the model folder
+ */
+spl_autoload_extensions('.php, .class.php');
+spl_autoload_register('autoload_model');
 
 /*
  * Load classes on request from vendor/composer folder

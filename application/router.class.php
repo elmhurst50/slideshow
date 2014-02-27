@@ -55,14 +55,15 @@ class router {
  */
  public function loader()
  {
-	/*** check the route ***/
-	$this->getController();
+	/*** check the route and get array ***/
+	$parts = $this->getController();
 
-	/*** if the file is not there diaf ***/
+	/*** if the file is not there diaf and turn url into $_get args***/
 	if (is_readable($this->file) == false)
 	{
-		$this->file = $this->path.'/error404.php';
-                $this->controller = 'error404';
+		$this->file = $this->path.'/indexController.php';
+                $this->controller = 'index';
+                $this->registry->template->args = $parts;
 	}
 
 	/*** include the controller ***/
@@ -76,10 +77,15 @@ class router {
 	if (is_callable(array($controller, $this->action)) == false)
 	{
 		$action = 'index';
+                array_shift($parts); //remove controller
+                $this->registry->args = $parts;
 	}
 	else
 	{
 		$action = $this->action;
+                array_shift($parts); //remove controller
+                array_shift($parts); // remove action
+                $this->registry->args = $parts;
 	}
 	/*** run the action ***/
 	$controller->$action();
@@ -125,9 +131,14 @@ private function getController() {
 	{
 		$this->action = 'index';
 	}
-
+        
+       
 	/*** set the file path ***/
 	$this->file = $this->path .'/'. $this->controller . 'Controller.php';
+        
+      
+        /*** return array to allow transfer of url variable ***/
+        return $parts;
 }
 
 

@@ -6,7 +6,9 @@
  /*** define the site path ***/
  $site_path = realpath(dirname(__FILE__));
  define ('__SITE_PATH', $site_path);
-
+ 
+ define ('__SITE_URL', 'http://localhost/monty');
+ 
  /*** include the init.php file ***/
  include 'includes/init.php';
 
