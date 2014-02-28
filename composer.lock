@@ -55,19 +55,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/samjoyce777/montageplayer.git",
-                "reference": "6df7d3c0541c7e5294c97c9af91a02f6f5ada93d"
+                "reference": "6a5ed07fa04ecb17b29d383c190e1fa85ceba512"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/samjoyce777/montageplayer/zipball/6df7d3c0541c7e5294c97c9af91a02f6f5ada93d",
-                "reference": "6df7d3c0541c7e5294c97c9af91a02f6f5ada93d",
+                "url": "https://api.github.com/repos/samjoyce777/montageplayer/zipball/6a5ed07fa04ecb17b29d383c190e1fa85ceba512",
+                "reference": "6a5ed07fa04ecb17b29d383c190e1fa85ceba512",
                 "shasum": ""
             },
             "type": "git",
             "autoload": {
                 "psr-0": {
-                    "samjoyce\\montageplayer": "src",
-                    "samjoyce\\montageinterface": "src"
+                    "samjoyce\\montageplayer": "src"
                 }
             },
             "license": [
@@ -91,7 +90,7 @@
                 "source": "https://github.com/samjoyce777/montageplayer/tree/master",
                 "issues": "https://github.com/samjoyce777/montageplayer/issues"
             },
-            "time": "2014-02-26 13:43:37"
+            "time": "2014-02-28 09:09:06"
         },
         {
             "name": "samjoyce777/simpleimage",

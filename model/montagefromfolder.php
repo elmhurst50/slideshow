@@ -1,6 +1,6 @@
 <?php
 
-use samjoyce\montageinterface\montageInterface;
+use samjoyce\montageplayer\montageInterface;
 
 class MontageFromFolder implements montageInterface{
 
