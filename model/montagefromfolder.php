@@ -2,6 +2,9 @@
 
 use samjoyce\montageplayer\montageInterface;
 
+/*
+ * Used to provide the information required by the montagePlayer
+ */
 class MontageFromFolder implements montageInterface{
 
     
@@ -12,6 +15,7 @@ class MontageFromFolder implements montageInterface{
     function __construct($folder, $path = 'uploads') {
        
         $this->path = $path;
+        
         if($folder!='new'){ 
             $this->folder = $folder;
             $this->setMontage();
@@ -22,18 +26,25 @@ class MontageFromFolder implements montageInterface{
         
     }
 
-    
+    /*
+     * return array of data related to the slide $slideNo
+     */
     public function getslide($slideNo) {
-       $this->slides[$slideNo]["imageURL"] = $this->slides[$slideNo]["image"];
        return $this->slides[$slideNo];
     }
     
+    /*
+     * return string with location of music file
+     */
     public function getMusic() {
-        $file = $this->path . $this->folder . '/music/' . $this->folder . '.mp3';
-        return file_exists($file) ? $file : false;
+        $file = __SITE_URL . '/' . $this->path . $this->folder . '/music/' . $this->folder . '.mp3';
+        return $file;
       
     }
     
+    /*
+     * return int number of slides in this montage
+     */
     public function numberOfSlides() {
         return count($this->slides);
     }
@@ -90,6 +101,10 @@ class MontageFromFolder implements montageInterface{
         }
     }
     
+    
+    /*
+     * This creates a panel section on th edit screen for each image
+     */
     public function createEdit($index, $showId, $val=array("title"=>" ", "text"=>" ", "image"=>" ", "animation"=>" "), $folder = 'uploads'){
           $editPanel = '<div class="row panel list-item slideEditor">'//slideEditor is for jquery selector
             . '<div class="col-sm-2"><img src="' . $val["image"] . '"  /></div>'

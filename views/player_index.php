@@ -6,7 +6,7 @@
         <link href="<?php echo __SITE_URL;?>/assets/css/style.css" rel="stylesheet">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
         <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-        <script src="<?php echo __SITE_URL;?>/js/cycle2.js"></script>
+        <script src="<?php echo __SITE_URL;?>/assets/js/cycle2.js"></script>
 
 
         <script>
@@ -133,7 +133,7 @@
         <div class="wrapper">
 
 
-            <?php //$montage->loadMusic(); ?>
+            <?php $player->loadMusic(); ?>
 
             <div id="slideshow-container" class="cycle-slideshow" 
                  data-cycle-fx="fade"
@@ -168,13 +168,13 @@
         </div>
 
         
-        <?php //require_once 'views/modals/settings.php'; ?>
+        <?php require_once 'modals/settings.php'; ?>
 
-        <?php //require_once 'views/modals/map.php'; ?>
+        <?php require_once 'modals/map.php'; ?>
 
-        <?php //require_once 'views/modals/contact.php'; ?>
+        <?php require_once 'modals/contact.php'; ?>
 
-        <?php //require_once 'views/modals/social.php'; ?>
+        <?php require_once 'modals/social.php'; ?>
   </body>
 </html>
 

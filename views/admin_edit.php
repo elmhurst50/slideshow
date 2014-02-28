@@ -1,13 +1,3 @@
-<?php
-
-
-
-
-echo $heading;
-?>
-
-
-
 <?php include 'partial/header.php'; ?>
 
 
@@ -75,7 +65,7 @@ echo $heading;
                     </div>
                 </div>
                 <audio id="showBackgroundMusic">
-                    <source id="theMusic" src="uploads/<?php echo $selectedShow . '/music/' . $montage->showMusic; ?>" type="audio/mpeg">
+                    <source id="theMusic" src="<?php echo $montage->getMusic(); ?>" type="audio/mpeg">
                 </audio>
                 <input type="hidden" name="showMusic" id="showMusic" value="<?php echo empty($montage->showMusic) ? "" : $montage->showMusic; ?>" />
                 <input type="hidden" name="showMusicOnOff" id="showMusicOnOff" value="<?php echo empty($montage->showMusicOnOff) ? "" : $montage->showMusicOnOff; ?>" />

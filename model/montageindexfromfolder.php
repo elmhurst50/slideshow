@@ -1,5 +1,9 @@
 <?php
 
+
+/*
+ * Used to display all the montages in selected folder
+ */
 class montageIndexFromFolder{
 
     function __construct() {
