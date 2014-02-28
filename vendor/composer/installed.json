@@ -90,5 +90,50 @@
             "source": "https://github.com/samjoyce777/simpleimage/tree/master",
             "issues": "https://github.com/samjoyce777/simpleimage/issues"
         }
+    },
+    {
+        "name": "samjoyce777/montageplayer",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/samjoyce777/montageplayer.git",
+            "reference": "6a5ed07fa04ecb17b29d383c190e1fa85ceba512"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/samjoyce777/montageplayer/zipball/6a5ed07fa04ecb17b29d383c190e1fa85ceba512",
+            "reference": "6a5ed07fa04ecb17b29d383c190e1fa85ceba512",
+            "shasum": ""
+        },
+        "time": "2014-02-01 00:00:00",
+        "type": "git",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "samjoyce\\montageplayer": "src"
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Sam Joyce",
+                "email": "samjoyce777@gmail.com",
+                "homepage": "http://www.samjoyce.co.uk",
+                "role": "Developer"
+            }
+        ],
+        "description": "Plays a montage based on imported images from source",
+        "homepage": "http://samjoyce.co.uk",
+        "keywords": [
+            "image",
+            "montage"
+        ],
+        "support": {
+            "source": "https://github.com/samjoyce777/montageplayer/tree/master",
+            "issues": "https://github.com/samjoyce777/montageplayer/issues"
+        }
     }
 ]
